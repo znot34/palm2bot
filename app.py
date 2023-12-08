@@ -4,8 +4,8 @@ from vertexai.language_models import ChatModel
 import os
 
 app = Flask(__name__)
-PROJECT_ID = "mimetic-firefly-232711"  
-LOCATION = "us-central1"  
+PROJECT_ID = os.getenv("PROJECT_ID")
+LOCATION = os.getenv("LOCATION")  
 
 vertexai.init(project=PROJECT_ID, location=LOCATION)
 
